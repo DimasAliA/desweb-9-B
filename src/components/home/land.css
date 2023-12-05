@@ -106,7 +106,7 @@
   
   .hero-text h1 {
     position: absolute;
-    top: 80%;
+    top: 60%;
     left: 10px;
     transform: translate(0, -20%);
     color: #fff;
@@ -131,7 +131,7 @@
 
   .content-text h1 {
     position: absolute;
-    top: 50%;
+    margin-top: 60%;
     left: 10px;
     transform: translate(0, -50%);
     color: #fff;

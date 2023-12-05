@@ -22,7 +22,7 @@
 
 .login-card {
   position: absolute;
-  top: 46%;
+  top: 150%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;

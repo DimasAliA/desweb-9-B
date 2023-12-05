@@ -3,8 +3,6 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faImage, faVideo, faGrin } from '@fortawesome/free-solid-svg-icons';
 
-
-
 const StatusUpdate = () => {
   const currentUsername = localStorage.getItem('currentUsername');
   const registeredUsers = JSON.parse(localStorage.getItem('registeredUsers')) || [];

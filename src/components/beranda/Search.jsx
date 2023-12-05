@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faImage, faPlusSquare } from '@fortawesome/free-solid-svg-icons';
+import {  faImage, faPlusSquare } from '@fortawesome/free-solid-svg-icons';
 
 const Search = ({ onPostSubmit }) => {
   const [statusText, setStatusText] = useState('');

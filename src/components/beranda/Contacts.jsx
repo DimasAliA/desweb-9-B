@@ -7,7 +7,9 @@ const Contact = ({ name, onOptionsClick }) => {
   return (
     <div className="flex items-center justify-between p-2 hover:bg-gray-100 rounded-md">
       <div className="flex items-center space-x-3">
-        <div className="rounded-full bg-gray-300 h-8 w-8"></div>
+        <div className="rounded-full bg-gray-300 h-8 w-8">
+          <img src='/images/atas.png' alt="Profile" className="w-full h-full rounded-full" />
+        </div>
         <span className="text-sm font-medium">{name}</span>
       </div>
       <button onClick={onOptionsClick}>
