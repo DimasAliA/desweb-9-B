@@ -11,16 +11,21 @@ import {
   faSignOutAlt
 } from '@fortawesome/free-solid-svg-icons';
 
+const currentUsername = localStorage.getItem('currentUsername');
+const registeredUsers = JSON.parse(localStorage.getItem('registeredUsers')) || [];
+const userData = registeredUsers.find(user => user.username === currentUsername);
+const storedImage = localStorage.getItem('profileImage');
+
 const Sidebar = () => {
   return (
     <aside className="w-64 h-screen bg-white p-5 fixed">
       <div className="flex items-center space-x-4 mb-6">
         <img
           className="h-12 w-12 rounded-full"
-          src="path_to_your_profile_image"
+          src={storedImage}
           alt="User profile"
         />
-        <span className="font-semibold text-lg">Felix Dean</span>
+        <span className="font-semibold text-lg">{userData.fullName}</span>
       </div>
 
       <div className="mb-6">
