@@ -1,0 +1,73 @@
+/* login.css */
+
+/* Gaya halaman login yang diperbarui */
+.login-section {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  .input-group label {
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .forgot-password-link {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+    text-align: left;
+  }
+  
+  .forgot-password-link a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  /* .forgot-password-link a:hover {
+    text-decoration: underline;
+  } */
+  
+  .login-btn,
+  .google-login-btn {
+    width: 100%;
+    background-color: rgb(240, 57, 57);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 15px;
+  }
+  
+  .login-btn:hover,
+  .google-login-btn:hover {
+    opacity: 0.8;
+  }
+  
+  .or-divider {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .google-login-btn {
+    background-color: #FBA6A6;
+;
+  }
+  

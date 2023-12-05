@@ -1,0 +1,146 @@
+.profile-card {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    margin: auto;
+    margin-top: 50px;
+    max-width: 1200px;
+  }
+  
+  .profile-image-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+  }
+  .profile-image img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .change-picture-button {
+    background-color: #ff4b4b;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+  }
+  .change-picture-button:hover {
+    background-color: #d12c2c;
+  }
+  
+  .profile-form-section {
+    padding: 20px;
+  }
+  
+  .profile-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .profile-form input[type="text"],
+  .profile-form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .profile-form textarea {
+    resize: vertical;
+  }
+  
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    font-weight: bold;
+  }
+  
+  .input-group label {
+    margin-bottom: 5px;
+    
+  }
+  .user {
+    width: 150px;
+  }
+
+  textarea {
+    height: 110px;
+  }
+  
+  .form-row .input-group:not(.full-width) {
+    flex: 1;
+  }
+  
+  .input-group.full-width {
+    flex: 0 0 calc(100% - 20px);
+    margin-right: 0;
+    font-weight: bold;
+  }
+  
+  .edit-btn[type="button"] {
+    padding: 10px 20px;
+    max-width: 200px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    position: relative;
+    font-weight: bold;
+    left: 72%;
+    
+  }
+  
+  .edit-btn[type="button"]:hover {
+    background-color: #218838;
+  }
+  .edit-btn-save {
+    background-color: #28a745;
+  }
+  
+  .edit-btn-edit {
+    background-color: #dc3545;
+  }
+  
+  .edit-btn[type="button"]:hover {
+    background-color: #218838;
+  }
+  
+  .edit-btn-edit[type="button"]:hover {
+    background-color: #c82333;
+  }
+
+  @media (max-width: 768px) {
+    .profile-card {
+      width: 90%;
+    }
+  
+    .change-picture-button {
+      width: 50%;
+    }
+  }
+
+  

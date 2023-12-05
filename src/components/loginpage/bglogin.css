@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Hebrew:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+}
+
+.bglogin-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.login-card {
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 300px;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.bglogin-background {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.bglogin-content {
+  background-color: #f8f8f8;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.home-header {
+  background: #ffffff;
+  padding: 1em;
+}
+
+.home-header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.home-header nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.home-header nav ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.home-header nav ul li button {
+  font-family: 'Arial', sans-serif;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.social-media-btn,
+.about-btn {
+  color: rgb(158, 158, 158);
+  background-color: transparent;
+  font-weight: bold;
+  font-size: 23px;
+}
+
+.signup-btn {
+  background-color: rgb(240, 57, 57);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  font-size: 23px;
+}
+
+.login-btn {
+  background-color: rgb(240, 57, 57);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  font-size: 23px;
+}
+
+.home-header nav ul li:last-child {
+  margin-right: 20;
+}
+
+.social-media-btn:hover,
+.about-btn:hover {
+  text-decoration: underline;
+}
+
+.signup-btn:hover {
+  background-color: #BDBDBD;
+}
+
+.login-btn:hover {
+  background-color: #B71C1C;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+.home-main {
+  text-align: center;
+}
+
+.hero {
+  position: relative;
+  margin: 0;
+}
+
+.hero-text h1 {
+  position: absolute;
+  top: 80%;
+  left: 10px;
+  transform: translate(0, -20%);
+  color: #fff;
+  z-index: 1;
+  font-family: 'Open Sans Hebrew', sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 87px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.hero img {
+  width: 100%;
+  display: block;
+}
+
+.content {
+  padding: 0;
+  background: #f9f9f9;
+}
+
+.content-text h1 {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translate(0, -50%);
+  color: #fff;
+  font-family: 'Open Sans Hebrew', sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 87px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.hero + .content img {
+  margin-top: 0;
+}
+
+.content img {
+  width: 100%;
+  display: block;
+  margin-top: 0;
+}
+
+.home-footer {
+  background: #333;
+  color: #fff;
+  padding: 1em;
+}
+
+.home-footer ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.home-footer ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.home-footer ul li a:hover {
+  color: #ccc;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+* {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
