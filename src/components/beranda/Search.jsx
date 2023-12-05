@@ -61,7 +61,7 @@ const Search = ({ onPostSubmit }) => {
           <input
             className="pl-10 pr-3 py-1 w-full rounded-3xl border border-gray-300 focus:outline-none focus:border-blue-500"
             type="text"
-            placeholder="What's on your mind, Felix?"
+            placeholder={`What's on your mind, ${userData.fullName}?`}
             value={statusText}
             onChange={handleStatusChange}
           />

@@ -5,7 +5,10 @@ const Feed = ({ postsData }) => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    setPosts(postsData || []);
+    const updatedPosts = postsData.map(post => {
+      return {...post, postId: post.id || Date.now() + Math.random()};
+    });
+    setPosts(updatedPosts);
   }, [postsData]);
 
   if (!posts || posts.length === 0) {

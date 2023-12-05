@@ -1,6 +1,7 @@
 // Sidebar.js
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useNavigate } from 'react-router-dom';
 import {
   faHouseUser,
   faCompass,
@@ -11,12 +12,20 @@ import {
   faSignOutAlt
 } from '@fortawesome/free-solid-svg-icons';
 
-const currentUsername = localStorage.getItem('currentUsername');
-const registeredUsers = JSON.parse(localStorage.getItem('registeredUsers')) || [];
-const userData = registeredUsers.find(user => user.username === currentUsername);
-const storedImage = localStorage.getItem('profileImage');
-
 const Sidebar = () => {
+  const currentUsername = localStorage.getItem('currentUsername');
+  const registeredUsers = JSON.parse(localStorage.getItem('registeredUsers')) || [];
+  const userData = registeredUsers.find(user => user.username === currentUsername);
+  const storedImage = localStorage.getItem('profileImage');
+  const navigate = useNavigate();
+
+  const handleSettingsClick = () => {
+    navigate('/profile');
+  };
+
+  const handleLogoutClick = () => {
+    navigate('/login');
+  };
   return (
     <aside className="w-64 h-screen bg-white p-5 fixed">
       <div className="flex items-center space-x-4 mb-6">
@@ -53,15 +62,13 @@ const Sidebar = () => {
         </ul>
     </nav>
 
-      <div className="mt-auto">
-        <div className="flex items-center text-gray-700 hover:text-blue-500 cursor-pointer mb-4">
+      <div onClick={handleSettingsClick} className="flex items-center text-gray-700 hover:text-blue-500 cursor-pointer mb-4">
           <FontAwesomeIcon icon={faCog} className="mr-4" />
           Settings
         </div>
-        <div className="flex items-center text-gray-700 hover:text-blue-500 cursor-pointer">
+        <div onClick={handleLogoutClick} className="flex items-center text-gray-700 hover:text-blue-500 cursor-pointer">
           <FontAwesomeIcon icon={faSignOutAlt} className="mr-4" />
           Logout
-        </div>
       </div>
 
       <div className="text-xs text-gray-400 mt-6">

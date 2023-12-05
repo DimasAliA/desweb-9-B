@@ -29,12 +29,8 @@ const Post = ({ postId,username, time, image, caption, likes, shares }) => {
 
   const addComment = () => {
     if (commentText.trim() !== '') {
-      const newComment = { username, text: commentText };
-      const updatedComments = [...postComments];
-      if (!updatedComments[postId]) {
-        updatedComments[postId] = [];
-      }
-      updatedComments[postId].push(newComment);
+      const newComment = { username, text: commentText, postId };
+      const updatedComments = [...postComments, newComment];
       setPostComments(updatedComments);
       saveCommentsToLocalStorage(updatedComments);
       setCommentText('');
@@ -50,7 +46,7 @@ const Post = ({ postId,username, time, image, caption, likes, shares }) => {
           alt={`Post by ${username}`}
         />
         <div>
-          <div className="font-semibold">{username}</div>
+          <div className="font-semibold" style={{ textAlign: 'left' }}>{username}</div>
           <div className="text-sm text-gray-500">{time}</div>
         </div>
       </div>
@@ -64,22 +60,16 @@ const Post = ({ postId,username, time, image, caption, likes, shares }) => {
       )}
 
       <p style={{ textAlign: 'left' }}>{caption}</p>
-      <button
-        className="text-blue-500 hover:underline"
-        onClick={toggleCommentVisibility}
-      >
-        {isCommentVisible ? 'Hide Comments' : 'Show Comments'}
-      </button>
-
+      {isCommentVisible && <hr className="my-2" />}
       {/* Daftar komentar */}
       {isCommentVisible && (
         <div className="mt-4">
-          {postComments.map((comment, index) => (
-            <div key={index} className="mb-2">
-              <strong>{comment.username}: </strong>
-              {comment.text}
-            </div>
-          ))}
+            {postComments.filter(comment => comment.postId === postId).map((comment, index) => (
+              <div key={index} className="mb-2" style={{ textAlign: 'left' }}>
+                <strong>{comment.username}: </strong>
+                {comment.text}
+              </div>
+            ))}
 
           <div className="flex mt-2">
             <input
@@ -103,9 +93,13 @@ const Post = ({ postId,username, time, image, caption, likes, shares }) => {
         <span>
           <FontAwesomeIcon icon={faHeart} /> {likes} Likes
         </span>
-        <span>
-          <FontAwesomeIcon icon={faComment} /> {postComments.length} Comments
-        </span>
+        <button
+          className="text-blue-500 hover:underline flex items-center"
+          onClick={toggleCommentVisibility}
+        >
+          <FontAwesomeIcon icon={faComment} />
+          {` ${postComments.filter(comment => comment.postId === postId).length} Comments`}
+        </button>
         <span>
           <FontAwesomeIcon icon={faShare} /> {shares} Shares
         </span>
