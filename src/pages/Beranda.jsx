@@ -1,10 +1,10 @@
 import React from 'react';
-import Sidebar from './Sidebar';
-import StatusUpdate from './StatusUpdate';
-import Stories from './Stories';
-import Contacts from './Contacts';
-import WeatherWidget from './WeatherWidget';
-import HomePage from './Homepage';
+import Sidebar from '../components/beranda/Sidebar';
+import StatusUpdate from '../components/beranda/StatusUpdate';
+import Stories from '../components/beranda/Stories';
+import Contacts from '../components/beranda/Contacts';
+import WeatherWidget from '../components/beranda/WeatherWidget';
+import HomePage from '../components/beranda/Homepage';
 
 function Beranda() {
   return (

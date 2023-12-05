@@ -1,7 +1,7 @@
 // loginpage.jsx
 
 import React from 'react';
-import { Header, MainContent, Footer } from './backgroundlogin';
+import { Header, MainContent, Footer } from '../components/loginpage/backgroundlogin';
 
 const LoginPage = () => {
     return (

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Navigation from './Navigation';
-import ProfileForm from './ProfileForm';
-import Footer from './Footer';
+import Navigation from '../components/profile-page/Navigation';
+import ProfileForm from '../components/profile-page/ProfileForm';
+import Footer from '../components/profile-page/Footer';
 
 
 const Profile = () => {
